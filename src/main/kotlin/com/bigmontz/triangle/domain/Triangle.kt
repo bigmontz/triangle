@@ -6,8 +6,12 @@ import java.math.BigDecimal
  * Represents a Triangle
  */
 class Triangle(val a : BigDecimal, val b : BigDecimal, val c : BigDecimal) {
-    val triangleType = if ( a == b && b == c ) TriangleType.EQUILATERAL
+    val triangleType = if (isInvalid()) TriangleType.INVALID
+        else if ( a == b && b == c ) TriangleType.EQUILATERAL
         else if ( a == b || b == c || a == c ) TriangleType.ISOSCELES
         else TriangleType.SCALENE
 
+    private fun isInvalid() : Boolean {
+        return b.plus(c) < a || a.plus(b) < c || a.plus(c) < b
+    }
 }

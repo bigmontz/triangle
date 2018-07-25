@@ -6,5 +6,5 @@ package com.bigmontz.triangle.domain
  * @author antonio.araujo
  */
 enum class TriangleType {
-    EQUILATERAL, ISOSCELES, SCALENE;
+    EQUILATERAL, ISOSCELES, SCALENE, INVALID;
 }
