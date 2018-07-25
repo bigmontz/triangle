@@ -1,7 +1,6 @@
 package com.bigmontz.triangle.domain
 
 import java.math.BigDecimal
-import java.math.RoundingMode
 
 /**
  * Represents a Triangle
